@@ -14,6 +14,7 @@
         <script>
             function validateForm() 
             {
+                
               //Declares relevant variables for input validation
               var firstname = document.forms["customerForm"]["firstname"].value;
               var lastname = document.forms["customerForm"]["lastname"].value;
@@ -21,18 +22,25 @@
               //Declares an array that is used for a flexible alert message for missing input
               var missingfields = Array();
 
+              //Tests for blank first name user input
               if (firstname == "") 
               {
                 missingfields.push(" First Name")   
               }//End if statement
+
+              //Tests for blank last name user input
               if (lastname == "") 
               {
                 missingfields.push(" Last Name")
               }//End if statement
+
+              //Tests for blank e-mail user input
               if (email == "") 
               {
                 missingfields.push(" E-mail")
               }//End if statement
+
+              //Tests to see if any user input fields were blank
               if (email == "" || lastname == "" || firstname == "") 
               {
                 alert("Please fill out the following fields:" + missingfields);
