@@ -1,0 +1,64 @@
+<!--Author: Matthew Bredahl
+    Date: 02/12/2019
+    Comments: This HTML page displays a customer information form with javascript validation and styled using a css file.
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="Deliverable5.css">
+        <title>
+            Customer Information
+        </title>
+        <script>
+            function validateForm() 
+            {
+              //Declares relevant variables for input validation
+              var firstname = document.forms["customerForm"]["firstname"].value;
+              var lastname = document.forms["customerForm"]["lastname"].value;
+              var email = document.forms["customerForm"]["email"].value;
+              //Declares an array that is used for a flexible alert message for missing input
+              var missingfields = Array();
+
+              if (firstname == "") 
+              {
+                missingfields.push(" First Name")   
+              }//End if statement
+              if (lastname == "") 
+              {
+                missingfields.push(" Last Name")
+              }//End if statement
+              if (email == "") 
+              {
+                missingfields.push(" E-mail")
+              }//End if statement
+              if (email == "" || lastname == "" || firstname == "") 
+              {
+                alert("Please fill out the following fields:" + missingfields);
+              }//End if statement
+            }//End validateForm function
+        </script>
+    </head>
+    <body>
+        <h1>
+            Customer Information
+        </h1>
+           <form name="customerForm" onsubmit="validateForm()" method="post">
+                <p>
+                    First Name:
+                    <input type="text" name="firstname"><br><br>
+                </p>
+                <p>
+                    Last Name:
+                    <input type="text" name="lastname"><br><br>
+                </p>
+                <p>
+                    E-mail:
+                    <input type="email" name="email" size=30><br><br>
+                    <input type="submit" value="Submit"> 
+                </p>
+            </form>
+        </p>
+    </body> 
+</html>

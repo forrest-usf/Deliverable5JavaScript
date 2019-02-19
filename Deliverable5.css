@@ -1,0 +1,26 @@
+/*
+Author: Matthew Bredahl
+    Date: 02/12/2019
+    Comments: This css page is used to style the corresponding html file.
+*/
+
+body
+{
+    font-family: Calibri;   
+}
+h1
+{
+    font-size: 300%;
+    text-align: center;
+    color: navy;
+}
+
+p
+{
+    text-align: center;
+}
+input text
+{
+    position: relative; left: 10%;
+    transform: translateX(-10%);
+}
